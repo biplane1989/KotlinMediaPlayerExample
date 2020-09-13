@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="orange"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_time_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_time_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/sb_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_life" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sb_music">
+
+
+            <TextView
+                android:id="@+id/tv_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="previous"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="play"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="stop"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="next"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
